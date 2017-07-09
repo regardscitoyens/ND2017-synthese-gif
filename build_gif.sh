@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd $(dirname $0)
+
 last=$(ls shots | tail -1)
 new=$(date +%y%m%d).png
 
