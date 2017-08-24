@@ -21,7 +21,7 @@ for shot in shots/*.png; do
 done
 
 if diff shots/$last shots/$new | grep diff > /dev/null; then
-  convert -delay 100 -loop 0 captioned/*.png synthese.gif
+  convert -delay 100 -loop 0 -layers Optimize captioned/*.png synthese.gif
   git add shots synthese.gif
   git commit -m "autoupdate"
   git push
